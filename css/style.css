@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    background-color: eee;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.form {
+    background-color: white;
+    border: 1px solid grey;
+    padding: 20px;
+}
+
+.form__labelText {
+    border: 1px solid grey;
+}
+
+.form__input {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: flex;
+    align-content: flex-end;
+}
