@@ -59,3 +59,15 @@ html {
 .form__button:hover {
     background-color: rgb(111, 184, 184);
 }
+
+.taskList {
+    text-decoration: none;
+}
+
+.list__item--done {
+    color: green;
+}
+
+.list__item--delete {
+    text-decoration: line-through;
+}
