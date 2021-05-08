@@ -28,15 +28,15 @@
         toggleTaskDone(index);
       });
     });
-  
-  
-  const removeButtons = document.querySelectorAll(".js-remove");
-  
-  removeButtons.forEach((removeButton, index) => {
-    removeButton.addEventListener("click", () => {
-      removeTask(index);
+
+
+    const removeButtons = document.querySelectorAll(".js-remove");
+
+    removeButtons.forEach((removeButton, index) => {
+      removeButton.addEventListener("click", () => {
+        removeTask(index);
+      });
     });
-  });
   }
 
   const render = () => {
@@ -52,27 +52,27 @@
     }
     document.querySelector(".js-tasks").innerHTML = htmlString;
 
-    bindEvents ();
+    bindEvents();
   };
 
-const onFormSubmit = (event) => {
-  event.preventDefault();
+  const onFormSubmit = (event) => {
+    event.preventDefault();
 
-  const newTaskContent = document.querySelector(".js-newTask").value.trim();
+    const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
-  if (newTaskContent === "") {
-    return;
-  }
-  addNewTask(newTaskContent);
-};
+    if (newTaskContent === "") {
+      return;
+    }
+    addNewTask(newTaskContent);
+  };
 
-const init = () => {
-  render();
+  const init = () => {
+    render();
 
-  const form = document.querySelector(".js-form");
+    const form = document.querySelector(".js-form");
 
-  form.addEventListener("submit", onFormSubmit);
-};
+    form.addEventListener("submit", onFormSubmit);
+  };
 
-init();
+  init();
 }
