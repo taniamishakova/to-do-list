@@ -8,52 +8,53 @@ html {
 
 .body {
     background-color: #eee;
-    font-family: 'Lora', serif;
-}
-
-.container {
-    max-width: 1000px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 800px;
     width: 100%;
     margin: 0 auto;
 }
 
+.container {
+    display: grid;
+    grid-auto-rows: minmax(60px, auto);
+    grid-row-gap: 3px;
+    margin: 11px 11px;
+}
+
 .header {
     font-size: 14px;
-    text-align: left;
-    padding: 10px 0;
+    padding-top: 20px;
+    margin: 10px;
 }
 
-.section {
-    border: 2px solid grey;
-    width: 90%;
-    margin: 15px;
-    padding: 10px 0;
-    background-color: #fff;
-}
-
-.section__header {
-    font-size: 16px;
-    padding: 10px;
+.container__item {
+    background-color: white;
+    padding: 5px 12px;
+    font-size: 12px;
 }
 
 .form {
     display: flex;
-    justify-content: space-around;
-    align-self: flex-start;
+    flex-direction: row;
+    background-color: white;
+    padding: 9px;
+    margin-bottom: 5px;
 }
 
 .form__input {
-    padding: 10px 0;
-    min-width: 700px;
-    margin: 5 px 0;
+    flex-grow: 1;
+    border: 1px solid #eee;
 }
 
 .form__button {
-    border: none;
+    font-size: 14px;
+    flex-grow: 0;
     background-color: teal;
     color: white;
-    padding: 11px;
-    margin-left: 5px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    border: 1px solid teal;
 }
 
 .form__button:hover {
@@ -61,13 +62,51 @@ html {
 }
 
 .taskList {
-    
+    list-style-type: none;
+    margin: 0px;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    background-color: white;
+
 }
 
-.list__item--done {
-    color: green;
+.taskList__item {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
 }
 
-.list__item--delete {
+.taskList__span {
+    flex-basis: 100%;
+    word-break: break-all;
+}
+
+.taskList__span--done {
     text-decoration: line-through;
+}
+
+.taskList__button {
+    height: 30px;
+    color: white;
+    border: none;
+    background-color: green;
+    margin: 0 10px;
+    flex: 0 1 30px;
+    font-size: 15px;
+}
+
+.taskList__button--done:hover {
+    background-color: rgb(52, 167, 17);
+}
+
+.taskList__button--done {
+    background-color: green;
+}
+
+.taskList__button--delete {
+    background-color: red;
+}
+
+.taskList__button--delete:hover {
+    background-color: rgb(255, 98, 98);
 }
