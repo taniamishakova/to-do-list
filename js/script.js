@@ -1,5 +1,7 @@
 {
-  const tasks = [];
+  const tasks = [
+
+  ];
 
 
   const addNewTask = (newTaskContent) => {
@@ -8,6 +10,15 @@
     });
 
     render();
+  };
+
+  const resetInput = (newTask) => {
+    newTask.value = "";
+    newTask.focus();
+  };
+
+  const activateInput = (newTask) => {
+    newTask.focus();
   };
 
   const removeTask = (taskIndeks) => {
@@ -43,13 +54,17 @@
     let htmlString = "";
     for (const task of tasks) {
       htmlString += `
-            <li class="list__item${task.done ? "list__item--done" : "list__item--delete"}">
-            <button class="list__button list__button--done js-done">✔️</button>
-            <button class="list__button list__button--delete js-remove">🗑️</button> 
-           ${task.content}
+            <li class="taskList__item">
+            <button class="taskList__button taskList__button--done js-done">${task.done ? "&#10003;" : ""
+        }</button>
+        <span class=${
+          task.done ? '"taskList__span taskList__span--done">' : '"">'
+        }${task.content}</span>
+            <button class="taskList__button taskList__button--delete js-remove">🗑️</button>
             </li>
             `;
     }
+
     document.querySelector(".js-tasks").innerHTML = htmlString;
 
     bindEvents();
@@ -59,11 +74,15 @@
     event.preventDefault();
 
     const newTaskContent = document.querySelector(".js-newTask").value.trim();
+    const newTask = document.querySelector(".js-newTask");
 
     if (newTaskContent === "") {
+      activateInput(newTask);
       return;
     }
+    resetInput(newTask);
     addNewTask(newTaskContent);
+    return;
   };
 
   const init = () => {
