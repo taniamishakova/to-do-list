@@ -2,13 +2,15 @@
     display: flex;
     flex-direction: row;
     background-color: white;
-    padding: 9px;
+    padding: 10px;
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .form__input {
     flex-grow: 1;
-    border: 1px solid #eee;
+    border: 2px solid #eee;
+    font-size: 13px;
 }
 
 .form__button {
@@ -18,10 +20,5 @@
     color: white;
     padding: 10px;
     margin-left: 15px;
-    margin-right: 10px;
     border: 1px solid teal;
-}
-
-.form__button:hover {
-    background-color: rgb(111, 184, 184);
 }
