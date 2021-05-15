@@ -1,12 +1,17 @@
 .container {
     display: grid;
-    grid-auto-rows: minmax(60px, auto);
-    grid-row-gap: 3px;
-    margin: 11px 11px;
+    grid-auto-rows: minmax(50px, auto);
+    grid-row-gap: 1px;
+    margin: 15px 10px;
 }
 
 .container__item {
     background-color: white;
-    padding: 5px 12px;
+    padding: 0 10px;
     font-size: 12px;
+}
+
+.container__header {
+    margin-left: 8px;
+    padding: 5px;
 }
