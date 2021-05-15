@@ -7,10 +7,24 @@
     margin-top: 5px;
 }
 
+@media (max-width: 767px) {
+    .form {
+      flex-wrap: wrap;
+    }
+  }
+
 .form__input {
     flex-grow: 1;
     border: 2px solid #eee;
     font-size: 13px;
+}
+
+@media (max-width: 767px) {
+    .form__input {
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px;
+    }
 }
 
 .form__button {
@@ -21,4 +35,11 @@
     padding: 10px;
     margin-left: 15px;
     border: 1px solid teal;
+}
+
+@media (max-width: 767px) {
+    .form__button {
+        width: 100%;
+        margin: 5px 0;
+    }
 }
