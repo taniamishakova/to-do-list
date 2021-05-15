@@ -3,7 +3,6 @@
 
   ];
 
-
   const addNewTask = (newTaskContent) => {
     tasks.push({
       content: newTaskContent,
@@ -14,10 +13,6 @@
 
   const resetInput = (newTask) => {
     newTask.value = "";
-    newTask.focus();
-  };
-
-  const activateInput = (newTask) => {
     newTask.focus();
   };
 
@@ -57,8 +52,7 @@
             <li class="taskList__item">
             <button class="taskList__button taskList__button--done js-done">${task.done ? "&#10003;" : ""
         }</button>
-        <span class=${
-          task.done ? '"taskList__span taskList__span--done">' : '"">'
+        <span class=${task.done ? '"taskList__span taskList__span--done">' : '"">'
         }${task.content}</span>
             <button class="taskList__button taskList__button--delete js-remove">🗑️</button>
             </li>
@@ -73,8 +67,8 @@
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    const newTaskContent = document.querySelector(".js-newTask").value.trim();
     const newTask = document.querySelector(".js-newTask");
+    const newTaskContent = newTask.value.trim();
 
     if (newTaskContent === "") {
       activateInput(newTask);
