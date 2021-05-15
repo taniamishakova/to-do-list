@@ -1,0 +1,27 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 9px;
+    margin-bottom: 5px;
+}
+
+.form__input {
+    flex-grow: 1;
+    border: 1px solid #eee;
+}
+
+.form__button {
+    font-size: 14px;
+    flex-grow: 0;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    border: 1px solid teal;
+}
+
+.form__button:hover {
+    background-color: rgb(111, 184, 184);
+}
