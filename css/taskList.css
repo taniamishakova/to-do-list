@@ -13,11 +13,11 @@
     padding-top: 20px;
     padding-bottom: 10px;
     line-height: 1.5;
+    word-break: break-all;
 }
 
 .taskList__span {
     flex-basis: 100%;
-    word-break: break-all;
 }
 
 .taskList__span--done {
