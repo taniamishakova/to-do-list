@@ -1,7 +1,5 @@
 {
-  const tasks = [
-
-  ];
+  const tasks = [];
 
   const addNewTask = (newTaskContent) => {
     tasks.push({
@@ -9,11 +7,6 @@
     });
 
     render();
-  };
-
-  const resetInput = (newTask) => {
-    newTask.value = "";
-    newTask.focus();
   };
 
   const removeTask = (taskIndeks) => {
@@ -35,7 +28,6 @@
       });
     });
 
-
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
@@ -47,14 +39,20 @@
 
   const render = () => {
     let htmlString = "";
+
     for (const task of tasks) {
       htmlString += `
-            <li class="taskList__item">
-            <button class="taskList__button taskList__button--done js-done">${task.done ? "&#10003;" : ""
-        }</button>
-        <span class=${task.done ? '"taskList__span taskList__span--done">' : '"">'
-        }${task.content}</span>
-            <button class="taskList__button taskList__button--delete js-remove">🗑</button>
+            <li 
+             class="taskList__item"
+            >
+             <button class="taskList__button taskList__button--done js-done">
+               ${task.done ? "&#10003;" : ""}
+             </button>
+             <span class=${task.done ? "taskList__span--done" : ""}>
+               ${task.content}</span>
+             <button class="taskList__button taskList__button--delete js-remove">
+               🗑
+             </button>
             </li>
             `;
     }
@@ -70,13 +68,11 @@
     const newTask = document.querySelector(".js-newTask");
     const newTaskContent = newTask.value.trim();
 
-    if (newTaskContent === "") {
-      activateInput(newTask);
-      return;
+    if (newTaskContent !== "") {
+      addNewTask(newTaskContent);
+      newTask.value = "";
     }
-    resetInput(newTask);
-    addNewTask(newTaskContent);
-    return;
+    newTask.focus();
   };
 
   const init = () => {
