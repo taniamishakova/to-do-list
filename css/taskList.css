@@ -13,7 +13,11 @@
     padding-top: 20px;
     padding-bottom: 10px;
     line-height: 1.5;
-    word-break: break-all;
+    word-break: break-word;
+}
+
+.taskList__item--hide {
+    display: none;
 }
 
 .taskList__span {
