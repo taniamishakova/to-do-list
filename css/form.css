@@ -37,6 +37,15 @@
     border: 1px solid teal;
 }
 
+.form__button:hover {
+background-color: rgb(26, 175, 175);
+}
+
+.form__button:active {
+    background-color: rgb(26, 175, 180);
+    }
+    
+
 @media (max-width: 767px) {
     .form__button {
         width: 100%;
