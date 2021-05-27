@@ -1,5 +1,6 @@
 {
   let tasks = [];
+  let hideDoneTasks = false;
 
   const addNewTask = (newTaskContent) => {
     tasks = [
@@ -29,7 +30,21 @@
     render();
   };
 
-  const bindEvents = () => {
+  const toggleHideDoneTasks = () => {
+    hideDoneTasks = !hideDoneTasks;
+    render();
+  };
+
+  const finishDoneTasks = () => {
+    tasks = tasks.map(task => ({
+      ...task,
+      done: true,
+    }))
+    render();
+
+  };
+
+  const bindRemoveEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
@@ -37,7 +52,9 @@
         removeTask(index);
       });
     });
+  };
 
+  const bindToggleDoneEvents = () => {
     const toggleDoneButtons = document.querySelectorAll(".js-done");
 
     toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -47,14 +64,33 @@
     });
   };
 
-  const render = () => {
+  const bindHideDoneTasksEvents = () => {
+    const buttonHideDoneTasks = document.querySelector(".js-hideDoneTasks");
+    if (!buttonHideDoneTasks) {
+      return;
+    }
+    buttonHideDoneTasks.addEventListener("click", () => {
+      toggleHideDoneTasks();
+    });
+  };
+
+  const bindFinishedDoneTasksEvents = () => {
+    const buttonFinishedAllTasks = document.querySelector(".js-finishedAllTasks");
+    if (!buttonFinishedAllTasks) {
+      return;
+    }
+    buttonFinishedAllTasks.addEventListener("click", () => {
+      finishDoneTasks();
+    });
+  };
+
+  const renderTask = () => {
     let htmlString = "";
 
     for (const task of tasks) {
       htmlString += `
       <li
-      class="taskList__item"
-      >
+      class="taskList__item${task.done && hideDoneTasks ? " taskList__item--hide" : ""}">
         <button class="taskList__button taskList__button--done js-done">
       ${task.done ? "&#10003;" : ""}
         </button>
@@ -68,8 +104,33 @@
     }
     document.querySelector(".js-tasks").innerHTML = htmlString;
 
-    bindEvents();
   };
+  const renderButtons = () => {
+    let buttonsHtmlString = "";
+
+    if (tasks.length > 0) {
+      buttonsHtmlString += `
+             <button class="section__buttons js-hideDoneTasks">
+           ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+             </button>
+             <button class="section__buttons js-finishedAllTasks"
+           ${tasks.every(({ done }) => done) ? "disabled" : ""}> 
+              Ukończ wszystkie
+             </button>
+              `;
+    }
+    document.querySelector(".js-sectionButtons").innerHTML = buttonsHtmlString;
+  }
+
+  const render = () => {
+    renderTask();
+    renderButtons();
+    bindRemoveEvents();
+    bindToggleDoneEvents();
+    bindHideDoneTasksEvents();
+    bindFinishedDoneTasksEvents();
+  };
+
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -93,105 +154,4 @@
   };
 
   init();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
