@@ -33,7 +33,7 @@
 .section__layoutButtons {
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 5px;
+    grid-gap: 20px;
 }
 
 @media (max-width: 767px) {
