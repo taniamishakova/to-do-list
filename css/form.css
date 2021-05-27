@@ -8,9 +8,9 @@
 
 @media (max-width: 767px) {
     .form {
-      flex-wrap: wrap;
+        flex-wrap: wrap;
     }
-  }
+}
 
 .form__input {
     flex-grow: 1;
@@ -29,22 +29,23 @@
 
 .form__button {
     font-size: 14px;
-    flex-grow: 0;
     background-color: teal;
     color: white;
     padding: 10px;
     margin-left: 15px;
-    border: 1px solid teal;
+    border: none;
+    transition: background 0.5s, transorm 2s;
 }
 
 .form__button:hover {
-background-color: rgb(15, 148, 148);
+    background-color: rgb(30, 172, 172);
+    transform: scale(1.1);
 }
 
 .form__button:active {
-    background-color: rgb(26, 175, 155);
-    }
-    
+    background-color: rgb(26, 175, 175);
+}
+
 @media (max-width: 767px) {
     .form__button {
         width: 100%;

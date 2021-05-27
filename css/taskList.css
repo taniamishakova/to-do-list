@@ -37,6 +37,7 @@
     margin: 0 15px;
     flex: 0 0 30px;
     font-size: 15px;
+    transition: background 0.5s;
 }
 
 .taskList__button:hover {

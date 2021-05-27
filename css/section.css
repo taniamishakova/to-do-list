@@ -47,6 +47,7 @@
     color: hsl(180, 100%, 22%);
     border: none;
     background-color: white;
+    transition: color 0.5s;
 }
 
 .section__buttons:disabled {
@@ -54,9 +55,9 @@
     pointer-events: none;
 }
 .section__buttons:hover {
-color: hsl(180, 100%, 30%);
+color: hsl(180, 84%, 40%);
 }
 
 .section__buttons:active {
-    color: hsl(180, 100%, 35%);
+    color: hsl(180, 100%, 45%);
 }
