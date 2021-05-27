@@ -41,16 +41,22 @@
 
 .taskList__button:hover {
     cursor: pointer;
+    background-color: rgb(28, 165, 28);
 }
 
 .taskList__button:active {
     outline: 2px solid #000;
-}
-
-.taskList__button--done {
-    background-color: rgb(23, 120, 23);
+    background-color: rgb(28, 165, 33);
 }
 
 .taskList__button--delete {
     background-color: crimson;
+}
+
+.taskList__button--delete:hover {
+    background-color: rgb(233, 39, 78);
+}
+
+.taskList__button--delete:avtive {
+    background-color: rgb(233, 39, 85);
 }
