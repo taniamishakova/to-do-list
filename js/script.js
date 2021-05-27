@@ -74,12 +74,12 @@
     });
   };
 
-  const bindFinishedDoneTasksEvents = () => {
-    const buttonFinishedAllTasks = document.querySelector(".js-finishedAllTasks");
-    if (!buttonFinishedAllTasks) {
+  const bindFinishDoneTasksEvents = () => {
+    const buttonFinishAllTasks = document.querySelector(".js-finishAllTasks");
+    if (!buttonFinishAllTasks) {
       return;
     }
-    buttonFinishedAllTasks.addEventListener("click", () => {
+    buttonFinishAllTasks.addEventListener("click", () => {
       finishDoneTasks();
     });
   };
@@ -113,7 +113,7 @@
              <button class="section__buttons js-hideDoneTasks">
            ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
              </button>
-             <button class="section__buttons js-finishedAllTasks"
+             <button class="section__buttons js-finishAllTasks"
            ${tasks.every(({ done }) => done) ? "disabled" : ""}> 
               Ukończ wszystkie
              </button>
@@ -128,7 +128,7 @@
     bindRemoveEvents();
     bindToggleDoneEvents();
     bindHideDoneTasksEvents();
-    bindFinishedDoneTasksEvents();
+    bindFinishDoneTasksEvents();
   };
 
 
