@@ -10,7 +10,7 @@
     padding: 5px;
 }
 
-.section__layout {
+.section__header {
     display: grid;
     grid-template-columns: 1fr auto;
     padding: 0 10px;
@@ -25,19 +25,19 @@
     }
 }
 
-.section__header {
+.section__title {
     margin-left: 5px;
     padding: 5px;
 }
 
-.section__layoutButtons {
+.buttons {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 20px;
 }
 
 @media (max-width: 767px) {
-    .section__layoutButtons {
+    .buttons {
         grid-template-columns: 1fr;
         margin-bottom: 20px;
     }
@@ -54,8 +54,9 @@
     color: #ddd;
     pointer-events: none;
 }
+
 .section__buttons:hover {
-color: hsl(180, 84%, 40%);
+    color: hsl(180, 84%, 40%);
 }
 
 .section__buttons:active {

@@ -119,7 +119,7 @@
              </button>
               `;
     }
-    document.querySelector(".js-sectionButtons").innerHTML = buttonsHtmlString;
+    document.querySelector(".js-buttons").innerHTML = buttonsHtmlString;
   }
 
   const render = () => {
