@@ -20,7 +20,7 @@
 }
 
 @media (max-width: 767px) {
-    .section__layout {
+    .section__header {
         grid-template-columns: 1fr;
     }
 }
@@ -48,6 +48,7 @@
     border: none;
     background-color: white;
     transition: color 0.5s;
+    cursor: pointer;
 }
 
 .section__buttons:disabled {

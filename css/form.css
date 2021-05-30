@@ -9,6 +9,8 @@
 @media (max-width: 767px) {
     .form {
         flex-wrap: wrap;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -34,7 +36,8 @@
     padding: 10px;
     margin-left: 15px;
     border: none;
-    transition: background 0.5s, transorm 2s;
+    cursor: pointer;
+    transition: background 0.5s, transorm 0.5s;
 }
 
 .form__button:hover {
