@@ -35,7 +35,7 @@
     render();
   };
 
-  const finishDoneTasks = () => {
+  const setAllDoneTasks = () => {
     tasks = tasks.map(task => ({
       ...task,
       done: true,
@@ -44,7 +44,7 @@
 
   };
 
-  const bindRemoveEvents = () => {
+  const bindRemoveEvent = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
@@ -54,7 +54,7 @@
     });
   };
 
-  const bindToggleDoneEvents = () => {
+  const bindToggleDoneEvent = () => {
     const toggleDoneButtons = document.querySelectorAll(".js-done");
 
     toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -64,7 +64,7 @@
     });
   };
 
-  const bindHideDoneTasksEvents = () => {
+  const bindHideDoneTasksEvent = () => {
     const buttonHideDoneTasks = document.querySelector(".js-hideDoneTasks");
     if (!buttonHideDoneTasks) {
       return;
@@ -74,17 +74,17 @@
     });
   };
 
-  const bindFinishDoneTasksEvents = () => {
-    const buttonFinishAllTasks = document.querySelector(".js-finishAllTasks");
-    if (!buttonFinishAllTasks) {
+  const bindSetAllDoneTasksEvent = () => {
+    const buttonSetAllDoneTasks = document.querySelector(".js-setAllDoneTasks");
+    if (!buttonSetAllDoneTasks) {
       return;
     }
-    buttonFinishAllTasks.addEventListener("click", () => {
-      finishDoneTasks();
+    buttonSetAllDoneTasks.addEventListener("click", () => {
+      setAllDoneTasks();
     });
   };
 
-  const renderTask = () => {
+  const renderTasks = () => {
     let htmlString = "";
 
     for (const task of tasks) {
@@ -113,7 +113,7 @@
              <button class="section__buttons js-hideDoneTasks">
            ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
              </button>
-             <button class="section__buttons js-finishAllTasks"
+             <button class="section__buttons js-setAllDoneTasks"
            ${tasks.every(({ done }) => done) ? "disabled" : ""}> 
               Ukończ wszystkie
              </button>
@@ -123,12 +123,12 @@
   }
 
   const render = () => {
-    renderTask();
+    renderTasks();
     renderButtons();
-    bindRemoveEvents();
-    bindToggleDoneEvents();
-    bindHideDoneTasksEvents();
-    bindFinishDoneTasksEvents();
+    bindRemoveEvent();
+    bindToggleDoneEvent();
+    bindHideDoneTasksEvent();
+    bindSetAllDoneTasksEvent();
   };
 
 
