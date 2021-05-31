@@ -30,19 +30,6 @@
     padding: 5px;
 }
 
-.buttons {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 20px;
-}
-
-@media (max-width: 767px) {
-    .buttons {
-        grid-template-columns: 1fr;
-        margin-bottom: 20px;
-    }
-}
-
 .section__buttons {
     color: hsl(180, 100%, 22%);
     border: none;
