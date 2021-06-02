@@ -14,6 +14,9 @@ A simple animated "To do list" app with the ability to mark completed tasks or r
 4. The task will appear in the list below.
 5. If you want to mark Your task as "done", please press green button.
 6. If you want to delete Your task, please click on red button.
+7. If you want to hide completed tasks, please use "Ukryj wszystkie" button.
+8. Tasks could be shown again if you will click on the "Pokaż wszystkie" button.
+9. If you want to mark your tasks as completed, click on the "Ukończ wszystkie" button.
 
 Watch a short video about usage after instruction:
 
