@@ -17,7 +17,6 @@
 .form__input {
     flex-grow: 1;
     border: 2px solid #eee;
-    font-size: 13px;
     padding: 10px;
 }
 
@@ -30,7 +29,6 @@
 }
 
 .form__button {
-    font-size: 14px;
     background-color: teal;
     color: white;
     padding: 10px;

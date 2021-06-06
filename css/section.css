@@ -16,7 +16,6 @@
     padding: 0 10px;
     grid-gap: 20px;
     background-color: white;
-    font-size: 13px;
 }
 
 @media (max-width: 767px) {
