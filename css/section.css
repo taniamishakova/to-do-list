@@ -1,8 +1,8 @@
 .section {
     display: grid;
-    grid-auto-rows: minmax(50px, auto);
     grid-row-gap: 1px;
     margin: 15px 10px;
+    box-shadow: 0 0 5px #ddd;
 }
 
 .section__body {
