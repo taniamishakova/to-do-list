@@ -34,6 +34,7 @@
     background-color: white;
     transition: color 0.5s;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .section__buttons:disabled {
