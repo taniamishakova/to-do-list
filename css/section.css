@@ -27,25 +27,3 @@
 .section__title {
     margin-left: 5px;
 }
-
-.section__buttons {
-    color: hsl(180, 100%, 22%);
-    border: none;
-    background-color: white;
-    transition: color 0.5s;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.section__buttons:disabled {
-    color: #ddd;
-    pointer-events: none;
-}
-
-.section__buttons:hover {
-    color: hsl(180, 84%, 40%);
-}
-
-.section__buttons:active {
-    color: hsl(180, 100%, 45%);
-}

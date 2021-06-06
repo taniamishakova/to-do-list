@@ -10,3 +10,25 @@
         margin-bottom: 20px;
     }
 }
+
+.buttons__button {
+    color: hsl(180, 100%, 22%);
+    border: none;
+    background-color: white;
+    transition: color 0.5s;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.buttons__button:disabled {
+    color: #ddd;
+    pointer-events: none;
+}
+
+.buttons__button:hover {
+    color: hsl(180, 84%, 40%);
+}
+
+.buttons__button:active {
+    color: hsl(180, 100%, 45%);
+}
