@@ -16,7 +16,7 @@
     word-break: break-word;
 }
 
-.taskList__item--hide {
+.taskList__item--hidden {
     display: none;
 }
 
